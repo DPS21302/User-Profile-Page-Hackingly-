@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <header>
-      <img src={darshit} alt={""} />
+      <img src={darshit} alt={"pic"} />
         <h1>Darshit Sojitra</h1>
       </header>
       
