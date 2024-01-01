@@ -1,41 +1,54 @@
 /* App.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(45deg, #66aaef, #ffffff, #74eddf);
   background-size: 400% 400%;
-  animation: gradientAnimation 20s infinite linear; /* Gradient animation */
+  animation: gradientAnimation 20s infinite linear;
+  /* Gradient animation */
 }
 
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
 }
 
-header{
+header {
   text-align: center;
 }
 
 h1 {
   font-size: 3em;
-  color: #333; /* Darker text color for better contrast on white background */
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  color: #333;
+  /* Darker text color for better contrast on white background */
+  background: #000000;
+  background: linear-gradient(to right, #000000 0%, #ff6924 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-img{
+img {
   width: 175px;
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 24px;
   backdrop-filter: blur(11px);
-  box-shadow: 3px 3px 31px -12px black;
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(196, 194, 194, 0.4);
 }
 
 /* Skills.css */
@@ -45,15 +58,15 @@ img{
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   margin-left: 66px;
   cursor: pointer;
-    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
 }
+
 .skill-cards {
   display: flex;
   flex-wrap: wrap;
@@ -61,6 +74,7 @@ img{
   margin-top: 100px;
   gap: 20px;
 }
+
 .skill-card {
   position: relative;
   width: 150px;
@@ -68,10 +82,12 @@ img{
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(32px);
+  box-shadow: inset 2px 2px 70px -8px rgb(255 107 0),
+    5px 6px 0px 0px rgb(0 0 0 / 18%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
@@ -80,14 +96,14 @@ img{
 
 .skill-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
 }
 
 .skill-card p {
   font-size: 18px;
   font-weight: bold;
   color: #333;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .remove-icon {
@@ -100,14 +116,13 @@ img{
   color: maroon;
 }
 
-
 .add-skill-card {
   width: 250px;
   height: 50px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   margin: 10px;
   padding: 15px;
   display: flex;
@@ -137,6 +152,7 @@ img{
 .add-skill-card button:hover {
   background-color: #4789b8;
 }
+
 /* Styling for HackathonHistory cards */
 
 .hackathon-history-container {
@@ -145,9 +161,8 @@ img{
   padding: 20px;
   gap: 20px;
   display: flex;
-
+  margin-top: 21px;
 }
-
 
 .hackathon-cards {
   display: flex;
@@ -165,7 +180,7 @@ img{
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   margin: 10px;
   padding: 15px;
   display: flex;
@@ -176,14 +191,14 @@ img{
 
 .hackathon-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
 }
 
 .hackathon-card img {
   width: 100%;
-  height: 150px;
+  height: 135px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 1rem;
 }
 
 .hackathon-details {
@@ -197,7 +212,8 @@ img{
 
 .hackathon-card p {
   font-size: 14px;
-  color: #555;
+  color: #555555a6;
+  font-weight: 400;
 }
 
 .hackathon-card button {
@@ -207,6 +223,7 @@ img{
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -238,23 +255,15 @@ img{
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   margin: 10px;
   padding: 15px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-/* .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-} */
 
 .project-details {
   flex: 1;
@@ -296,11 +305,11 @@ img{
 }
 
 .projects-showcase-container a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #DD2476, #FF512F);
+  background: linear-gradient(45deg, #dd2476, #ff512f);
   top: 0;
   left: 100%;
   transition: left 0.3s ease-in-out;
@@ -323,15 +332,14 @@ img{
 }
 
 .engagement-card {
-  width: 90%;
+  width: 88%;
   height: 150px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   margin: 10px;
-  margin-top: -62px;
-  margin-left: 44px;
+  margin-left: 17px;
   padding: 15px;
   display: flex;
   flex-direction: row;
@@ -340,13 +348,13 @@ img{
   flex-wrap: nowrap;
 }
 
-.engagement-Subcard{
+.engagement-Subcard {
   width: 15%;
   height: 99px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
   margin: 10px;
   margin-top: 11px;
   padding: 15px;
@@ -357,7 +365,7 @@ img{
   flex-wrap: nowrap;
 }
 
-.engagement-img{
+.engagement-img {
   width: 49px;
   height: 49px;
   aspect-ratio: 1;
@@ -367,7 +375,7 @@ img{
   position: absolute;
   -webkit-backdrop-filter: blur(11px);
   backdrop-filter: blur(11px);
-  box-shadow: 3px 3px 19px -10px black;
+  box-shadow: 12px 15px 44px -6px rgb(0 0 0 / 16%);
 }
 
 .engagement-card p {
@@ -376,6 +384,3 @@ img{
   color: #555;
   margin-top: 79px;
 }
-
-
-

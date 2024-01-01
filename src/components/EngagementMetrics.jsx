@@ -10,10 +10,18 @@ const EngagementMetrics = () => {
     projectsCompleted: 8,
     communityInteractions: 20,
   };
+  const headerStyle = {
+    marginTop: "-52px",
+    marginLeft: "77px",
+    position: "absolute",
+    background: "linear-gradient(to right, #000000 0%, #6754E3 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  };
 
   return (
     <div className="engagement-metrics-container">
-      <h2 style={{ marginLeft: "77px" }}>Engagement Metrics</h2>
+      <h2 style={headerStyle}>Engagement Metrics</h2>
       <div className="engagement-cards">
         <div className="engagement-card">
           <div className="engagement-Subcard">
